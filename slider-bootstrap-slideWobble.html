@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Слайдер Bootstrap эффект slideWobble - Демо</title>
+<link rel="publisher" href="https://plus.google.com/106292100743979527533"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="http://atmpl.ru/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="http://atmpl.ru/design/adaptive-slider/2015/bootstrap-atmpl/slider-bootstrap-slideWobble.css" rel="stylesheet" />
+<script src="http://atmpl.ru/assets/js/jquery-1.10.2.js"></script>
+<script src="http://atmpl.ru/assets/js/bootstrap.min.js"></script>
+<style>
+.carousel {
+  height: 500px;
+}
+.carousel-caption {
+  z-index: 10;
+}
+.carousel .item {
+  height: 500px;
+  background-color: transparent;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.carousel-caption h4 {
+  font-size:300%;
+}
+.carousel-caption h1 {
+  color:#fff;
+  font-size:6rem;
+  font-family:Georgia;
+}
+.carousel-caption h1 span {
+  color:#fff;
+  font-size:4rem;
+  text-shadow:none;
+}
+.carousel-caption h1 {
+  animation: baner 12s ease-in 0.2s infinite;
+  -moz-animation: baner 12s ease-in 0.2s infinite;
+  -webkit-animation: baner 12s ease-in 0.2s infinite;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+@-webkit-keyframes baner {
+0% {
+-webkit-transform: perspective(300px) rotateY(0deg);
+}
+15%, 100% {
+-webkit-transform: perspective(300px) rotateY(360deg);
+}
+}
+@-moz-keyframes baner {
+0% {
+-moz-transform: perspective(300px) rotateY(0deg);
+}
+15%, 100% {
+-moz-transform: perspective(300px) rotateY(360deg);
+}
+}
+@keyframes baner {
+0% {
+transform: perspective(300px) rotateY(0deg);
+}
+15%, 100% {
+transform: perspective(300px) rotateY(360deg);
+}
+}
+.btn-opacity,.btn-opacity:hover {background:transparent;color:#fff;border:1px solid #fff;}
+.carousel-slideWobble .carousel-inner .item {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+.carousel-slideWobble .carousel-inner .active {
+  transform:scale(1);
+}
+.carousel-slideWobble .carousel-inner .active.left,
+.carousel-slideWobble .carousel-inner .active.right {
+  left: 0;
+  transform:scale(0);
+  z-index: 1;
+}
+.carousel-slideWobble .carousel-inner .next.left,
+.carousel-slideWobble .carousel-inner .prev.right {
+  animation-name: slideWobble;
+  -webkit-animation-name: slideWobble;
+  animation-duration: 0.5s; 
+  -webkit-animation-duration: 0.5s; 
+  animation-timing-function: ease-out; 
+  -webkit-animation-timing-function: ease-out; 
+  visibility: visible !important;
+ }
+@-webkit-keyframes slideWobble {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes slideWobble {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.carousel-slideWobble .carousel-control {
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="clearfix"></div>
+<!-- carousel -->
+<div id="myCarousel" class="carousel slide carousel-slideWobble" data-ride="carousel">
+ <ol class="carousel-indicators">
+ <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+ <li data-target="#myCarousel" data-slide-to="1"></li>
+ <li data-target="#myCarousel" data-slide-to="2"></li>
+ </ol>
+ <div class="carousel-inner">
+ <div class="item active">
+ <img src="http://atmpl.ru/assets/img/home-bg.jpg" alt="Адаптивные элементы для сайта">
+ <div class="container">
+ <div class="carousel-caption">
+<h1><span class="glyphicon glyphicon-star-empty"></span> aTmpl <span class="glyphicon glyphicon-star-empty"></span></h1>
+<p style="color:#fff;">Адаптивные элементы для сайта</p>
+ <p><a class="btn btn-lg btn-opacity" href="/" role="button">Смотреть</a></p>
+ </div>
+ </div>
+ </div>
+ <div class="item">
+ <img src="http://atmpl.ru/assets/img/design-bg.jpg" alt="Адаптивный дизайн для сайта">
+ <div class="container">
+ <div class="carousel-caption">
+<h1><span class="glyphicon glyphicon-star-empty"></span> aTmpl <span class="glyphicon glyphicon-star-empty"></span></h1>
+<p style="color:#fff;">Адаптивный дизайн для сайта</p>
+ <p><a class="btn btn-lg btn-opacity" href="/publ" role="button">Смотреть</a></p>
+ </div>
+ </div>
+ </div>
+ <div class="item">
+<img src="http://atmpl.ru/assets/img/templates-bg1.jpg" alt="Адаптивные шаблоны для сайта">
+ <div class="container">
+ <div class="carousel-caption">
+<h1><span class="glyphicon glyphicon-star-empty"></span> aTmpl <span class="glyphicon glyphicon-star-empty"></span></h1>
+<p style="color:#fff;">Адаптивные шаблоны для сайта</p>
+ <p><a class="btn btn-lg btn-opacity" href="/load" role="button">Смотреть</a></p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+ <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+ </div>
+<!-- /.carousel -->
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
